@@ -1,0 +1,19 @@
+html {
+  background-color: #174d7c;
+}
+
+.container {
+  background-color: rgb(238, 238, 238, 0.2);
+  padding: 30px;
+  color: #eee;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.custom-input {
+  font-size: 2rem;
+  background-color: transparent !important;
+  padding: 30px;
+  color: #eee !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7) !important;
+  width: 100%;
+}

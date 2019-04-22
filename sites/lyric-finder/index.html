@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Lyric Finder</title>
+  <meta charset="utf-8">
+  <meta name="author" content="JayBit">
+  <meta name="description" content="Lyric Finder">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" type="text/css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+  <!-- Container -->
+  <div class="container" id="container" style="margin-top:10vh;">
+
+    <br>
+    <h1>jQuery Lyric Finder</h1>
+    <br>
+
+    <form id="form">
+      <div class="row">
+        <div class="five columns">
+          <input class="custom-input" type="text" id="song" name="song" value="Hope" placeholder="Song" required></input>
+        </div>
+        <div class="five columns">
+          <input class="custom-input" type="text" id="artist" name="artist" value="XXXTentacion" placeholder="Artist" required></input>
+        </div>
+        <div class="two columns">
+          <input class="custom-input" type="submit" name="artist"></input>
+        </div>
+      </div>
+    </form>
+
+    <div id="results" style="padding:30px;text-align:center;">
+
+    </div>
+
+  </div>
+
+  <!-- Import jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <!-- Import Custom JavaScript -->
+  <script src="js/index.js"></script>
+</body>
+
+</html>

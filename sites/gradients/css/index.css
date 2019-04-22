@@ -1,0 +1,48 @@
+html {
+  background: transparent;
+}
+
+#column {
+  /* background-color: rgb(238, 238, 238, 0.85); */
+  text-align: center;
+  padding: 40px 40px 25px 40px;
+}
+
+.title {
+    color: rgb(245, 245, 245);
+  padding-bottom: 5px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.title::selection {
+  background-color: none;
+}
+
+.sub-title {
+  color: rgb(245, 245, 245);
+  margin-top: 35px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  border-style: solid;
+  border-color: rgb(240, 240, 240);
+  border-width:medium;
+}
+
+.custom-button {
+      color: rgb(250, 250, 250);
+  width: 180px;
+  margin-top: 13px;
+  border-radius: 0px;
+  border-style: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.custom-button:hover{
+  color: rgb(240, 240, 240);
+}
+
+.custom-button::selection {
+  background-color: none;
+}
