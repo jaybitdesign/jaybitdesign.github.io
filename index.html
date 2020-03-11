@@ -1,166 +1,201 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 
 <head>
-  <!-- ANALYTICS -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136969731-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - James' Portfolio</title>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="Welcome to my design portfolio. From web development to digital marketing, I do it all. Based in Calgary, Alberta.">
+    <meta property="og:image" content="assets/img/portfolio-square.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:image" content="assets/img/portfolio-square.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
+    <link rel="icon" type="image/jpeg" sizes="605x604" href="assets/img/portfolio-square.jpg">
+    <link rel="icon" type="image/jpeg" sizes="605x604" href="assets/img/portfolio-square.jpg">
+    <link rel="icon" type="image/jpeg" sizes="605x604" href="assets/img/portfolio-square.jpg">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136969731-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-136969731-1');
-  </script>
-
-  <!-- META -->
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="description" content="Web development & design in Calgary, Alberta. Professional web services, SEO, and marketing.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="subject" content="Web Developer Portfolio">
-  <meta name="geo.placename" content="Calgary">
-  <meta name="geo.region" content="CAN-AB">
-
-  <!-- STYLES -->
-  <link rel="icon" href="assets/img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/styles.min.css">
-  <title>James Buchanan</title>
+  gtag('config', 'UA-136969731-2');
+</script>
 </head>
 
-<body style="font-family:Raleway;">
-  <div>
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">James Buchanan</a>
-        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navcol-1">
-          <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="404.html">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/jaybitdesign">GitHub</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="assets/resume.pdf">Resume</a>
-            </li>
-          </ul>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-white shadow-sm portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo pt-2" id="brand-large" href="index.html" style="font-family: Allura, cursive;font-weight: normal;font-size: 30px;">James Buchanan</a><a class="navbar-brand logo pt-2" id="brand-small" href="#" style="font-family: Allura, cursive;font-weight: normal;font-size: 30px;">J . B .</a>
+            <button
+                data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse text-uppercase" id="navbarNav" style="letter-spacing: 1px;font-family: Lato, sans-serif;font-size: 14px;">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html#welcome">Welcome</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html#skills">Skills</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html#portfolio">Portfolio</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="resume.pdf"><strong>Résumé</strong></a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
         </div>
-      </div>
     </nav>
-  </div>
-  <div data-bs-parallax-bg="true" style="background-image:url(assets/img/background.jpg);background-position:center;background-size:cover;">
-    <div class="jumbotron jumbotron-fluid bg-transparent text-dark mb-3">
-      <div class="container py-5">
-        <h1 id="headline" class="font-weight-bold text-center">
-          James Buchanan
-        </h1>
-        <h1 id="title" class="text-center font-weight-bold">#
-          <em>
-            <span class="typer text-dark text-itallic" id="main" data-words="Web Design,Marketing,Security" data-delay="80" data-deleteDelay="1800"></span>
-            <span class="cursor text-dark" data-owner="main"></span>
-          </em>
-        </h1>
-      </div>
+    <section class="text-left shadow-sm portfolio-block block-intro" style="background-repeat: no-repeat;background-image: url(&quot;assets/img/background.jpg&quot;);background-size: cover;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-xl-3 text-right" id="portrait"><img class="rounded img-fluid shadow mb-1 scale-on-hover transition" src="assets/img/portfolio.jpg" style="max-height: 250px;"></div>
+                <div class="col-lg-8 col-xl-9 d-flex align-items-center">
+                    <div class="about-me">
+                        <h1 class="mb-4" style="font-size: 2.1rem;">My name is <span style="font-weight: bold;font-style: normal;font-family: Allura, cursive;font-size: 2.7rem;">James Buchanan</span></h1>
+                        <hr>
+                        <p class="mb-3">I am a web developer and user experience designer driven by my passion for creating <strong>effective</strong>, <strong>fast</strong>, and <strong>easy to use</strong> websites.<br></p><a class="btn btn-primary shadow-sm scale-on-hover transition mr-3 mt-2"
+                            role="button" style="border-radius: 7px !important;" href="contact.html">Contact me today</a><a class="btn btn-link mt-2 mr-4 px-1" role="button" style="border-radius: 7px !important;font-size: 16px;" href="mailto:jaybitdesign@gmail.com">jaybitdesign@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="border-white portfolio-block skills" id="skills">
+        <div class="container">
+            <div class="heading mb-5">
+                <h2 class="pt-4" style="font-size: 2.3rem;">Skills</h2>
+                <p>Here are some of the fields that I specialize in. If you have any questions for me, please&nbsp;<a class="text-primary" href="mailto:jaybitdesign@gmail.com">send an email</a>.<br></p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card special-skill-item border-0">
+                        <div class="card-header bg-transparent border-0"><i class="fas fa-code fa-5x scale-on-hover transition" style="box-shadow: none !important;color: rgb(14,160,255);"></i></div>
+                        <div class="card-body">
+                            <h3 class="card-title" style="font-size: 1.5rem;">Web Development</h3>
+                            <p class="card-text" style="max-width: 420px;">Have an idea that you need built? As a full stack developer, I'm here to help.</p><a class="btn btn-primary shadow-sm px-3 scale-on-hover transition" role="button" style="letter-spacing: 2px;border-radius: 7px !important;font-size: 16px;font-weight: bold;"
+                                href="contact.html">Create</a></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card special-skill-item border-0">
+                        <div class="card-header bg-transparent border-0"><i class="far fa-laugh fa-5x scale-on-hover transition" style="box-shadow: none !important;color: rgb(14,160,255);"></i></div>
+                        <div class="card-body">
+                            <h3 class="card-title" style="font-size: 1.5rem;">Interface Design</h3>
+                            <p class="card-text" style="max-width: 420px;">I design websites to remove stress &nbsp;for the end user, increasing conversions.</p><a class="btn btn-primary shadow-sm px-3 scale-on-hover transition" role="button" style="letter-spacing: 2px;border-radius: 7px !important;font-size: 16px;font-weight: bold;"
+                                href="contact.html">Convert</a></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card special-skill-item border-0">
+                        <div class="card-header bg-transparent border-0"><i class="fas fa-crosshairs fa-5x scale-on-hover transition" style="box-shadow: none !important;color: rgb(14,160,255);"></i></div>
+                        <div class="card-body">
+                            <h3 class="card-title" style="font-size: 1.5rem;">Google Ads &amp; SEO&nbsp;</h3>
+                            <p class="card-text" style="max-width: 420px;">I am certified in Google Ads &amp; Analytics to help generate and analyze new traffic.</p><a class="btn btn-primary shadow-sm px-3 scale-on-hover transition" role="button" style="letter-spacing: 2px;border-radius: 7px !important;font-size: 16px;font-weight: bold;"
+                                href="contact.html">Market</a></div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-secondary mb-0" style="font-size: 1.8rem;font-style: italic;font-weight: bold;">...and&nbsp;<a href="resume.pdf">much more!</a><br></p>
+        </div>
+    </section>
+    <section class="shadow-sm portfolio-block website py-5" id="solutions" style="background-image: url(&quot;assets/img/background.jpg&quot;);background-size: cover;background-repeat: no-repeat;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 col-lg-4 d-flex justify-content-center">
+                    <div class="bg-white border rounded border-white shadow-sm p-4 scale-on-hover transition" data-aos="flip-down" data-aos-once="true" id="solution"><img class="img-fluid" src="assets/img/solution.gif"></div>
+                </div>
+                <div class="col text-left text my-4 px-5" data-aos="flip-right" data-aos-once="true">
+                    <p style="font-size: 2.0rem;font-weight: bold;">Let's build a solution.</p>
+                    <hr style="color: white;">
+                    <p class="mb-3" style="/*max-width: 600px;*/font-size: 1.2rem;">If you have a project that you want to get started, or think i may be a good candidate for your current job posting, here's my email:<br></p><a class="btn btn-primary shadow-sm scale-on-hover transition mr-3 mt-2" role="button" style="border-radius: 7px !important;"
+                        href="mailto:jaybitdesign@gmail.com">jaybitdesign@gmail.com</a><a class="btn btn-link px-1 mt-2" role="button" style="border-radius: 7px !important;font-size: 16px;" href="mailto:jaybitdesign@gmail.com">Contact me today</a>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="border-white portfolio-block projects-cards pb-0" id="portfolio">
+        <div class="container">
+            <div class="heading mb-5">
+                <h2 class="pt-4" style="font-size: 2.3rem;">Portfolio</h2>
+                <p>From here you can browse some of my past work. You can also visit my&nbsp;<a class="text-primary" href="http://github.com/jaybitdesign">github</a>, or view my&nbsp;<a class="text-primary" href="resume.pdf">résumé</a>.<br></p>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0"><a class="mb-1" href="https://ignitemp.com/"><img class="card-img-top mb-2 scale-on-hover transition" src="assets/img/ignite1.PNG" alt="Card Image" style="box-shadow: none !important;"></a>
+                        <div class="card-body pt-0">
+                            <h3 style="font-size: 1.4rem;">Ignite Marketing</h3>
+                            <p><a class="text-primary" href="https://ignitemp.com/">View&nbsp;<i class="fas fa-arrow-right" style="font-size: 12px;"></i></a></p>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0"><a class="mb-1" href="https://hillsvac.com/"><img class="card-img-top mb-2 scale-on-hover transition" src="assets/img/hills1.png" alt="Card Image" style="box-shadow: none !important;"></a>
+                        <div class="card-body pt-0">
+                            <h3 style="font-size: 1.4rem;">Hills Vac &amp; Steam</h3>
+                            <p><a class="text-primary" href="https://hillsvac.com/">View&nbsp;<i class="fas fa-arrow-right" style="font-size: 12px;"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0"><a class="mb-1" href="https://ccintl.ca/"><img class="card-img-top mb-2 scale-on-hover transition" src="assets/img/cci1.png" alt="Card Image" style="box-shadow: none !important;"></a>
+                        <div class="card-body pt-0">
+                            <h3 style="font-size: 1.4rem;">Custom Coatings Intl.</h3>
+                            <p><a class="text-primary" href="https://ccintl.ca/">View&nbsp;<i class="fas fa-arrow-right" style="font-size: 12px;"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0"><a class="mb-1" href="https://trappergord.com/"><img class="card-img-top mb-2 scale-on-hover transition" src="assets/img/trapper1.png" alt="Card Image" style="box-shadow: none !important;"></a>
+                        <div class="card-body px-0 pt-0">
+                            <h3 style="font-size: 1.4rem;">Trapper Gord</h3>
+                            <p><a class="text-primary" href="https://trappergord.com/">View&nbsp;<i class="fas fa-arrow-right" style="font-size: 12px;"></i></a></p>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0"><a class="mb-1" href="https://jaybitdesign.github.io/sites/agency/index.html"><img class="card-img-top mb-2 scale-on-hover transition" src="assets/img/jaybit1.PNG" alt="Card Image" style="box-shadow: none !important;"></a>
+                        <div class="card-body px-0 pt-0">
+                            <h3 style="font-size: 1.3rem;">JayBit Design (Old)</h3>
+                            <p><a class="text-primary" href="https://jaybitdesign.github.io/sites/agency/index.html">View&nbsp;<i class="fas fa-arrow-right" style="font-size: 12px;"></i></a></p>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0"><a class="mb-1" href="https://jaybitdesign.github.io/sites/dispensary/index.html"><img class="card-img-top mb-2 scale-on-hover transition" src="assets/img/ckc1.PNG" alt="Card Image" style="box-shadow: none !important;"></a>
+                        <div class="card-body px-0 pt-0">
+                            <h3 style="font-size: 1.3rem;">Calgary Kush Club</h3>
+                            <p><a class="text-primary" href="https://jaybitdesign.github.io/sites/dispensary/index.html">View&nbsp;<i class="fas fa-arrow-right" style="font-size: 12px;"></i></a></p>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0"><a class="mb-1" href="https://jaybitdesign.github.io/sites/starry-404/"><img class="card-img-top mb-2 scale-on-hover transition" src="assets/img/starry1.PNG" alt="Card Image" style="box-shadow: none !important;"></a>
+                        <div class="card-body px-0 pt-0">
+                            <h3 style="font-size: 1.4rem;">Space 404 Page</h3>
+                            <p><a class="text-primary" href="https://jaybitdesign.github.io/sites/starry-404/">View&nbsp;<i class="fas fa-arrow-right" style="font-size: 12px;"></i></a></p>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="shadow" id="contact-popup" style="right: 0%;position: fixed;bottom: 0%;">
+        <ul class="nav d-flex justify-content-center justify-content-sm-center justify-content-md-end popup">
+            <li class="nav-item text-center" id="popup-link"><a class="btn btn-primary btn-lg text-white shadow-lg px-5 py-2" role="button" id="popup-button" href="mailto:jaybitdesign@gmail.com" style="font-size: 16px;">jaybitdesign@gmail.com<br></a></li>
+        </ul>
     </div>
-  </div>
-  <div class="features-boxed bg-white">
-    <div class="container my-5 py-5">
-      <h1 class="text-center fit-text-large pb-3">My Projects</h1>
-      <div class="row justify-content-center features">
-        <div class="col-sm-12 col-lg-6 item">
-          <div class="box">
-            <a class="learn-more" href="./sites/dispensary/index.html">
-              <img class="img-fluid mb-4" src="assets/img/sites/dispensary.png" alt="Dispensary">
-            </a>
-            <h1 class="name font-weight-light fit-text">CKC Landing Page</h1>
-            <a class="learn-more" href="./sites/dispensary/index.html">View Project »</a>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-6 item">
-          <div class="box">
-            <a class="learn-more" href="./sites/agency/index.html">
-              <img class="img-fluid mb-4" src="assets/img/sites/agency.png" alt="Agency Website">
-            </a>
-            <h1 class="name font-weight-light fit-text">Agency Website</h1>
-            <a class="learn-more" href="./sites/agency/index.html">View Project »</a>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-6 item">
-          <div class="box">
-            <a class="learn-more" href="./sites/starry-404/index.html">
-              <img class="img-fluid mb-4" src="assets/img/sites/starry-404.png" alt="Gradients">
-            </a>
-            <h1 class="name font-weight-light fit-text">Starry 404</h1>
-            <a class="learn-more" href="./sites/starry-404/index.html">View Project »</a>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-6 item">
-          <div class="box">
-            <a class="learn-more" href="./sites/gradients/index.html">
-              <img class="img-fluid mb-4" src="assets/img/sites/gradients.png" alt="Gradients">
-            </a>
-            <h1 class="name font-weight-light fit-text">Random Gradients</h1>
-            <a class="learn-more" href="./sites/gradients/index.html">View Project »</a>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-6 item">
-          <div class="box">
-            <a class="learn-more" href="./sites/lyric-finder/index.html">
-              <img class="img-fluid mb-4" src="assets/img/sites/lyric-finder.png" alt="Lyric Finder">
-            </a>
-            <h1 class="name font-weight-light fit-text">jQuery Lyric Finder</h1>
-            <a class="learn-more" href="./sites/lyric-finder/index.html">View Project »</a>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-6 item">
-          <div class="box">
-            <a class="learn-more" href="./sites/quiz/index.html">
-              <img class="img-fluid mb-4" src="assets/img/sites/quiz.png" alt="Quiz">
-            </a>
-            <h1 class="name font-weight-light fit-text">JavaScript Quiz</h1>
-            <a class="learn-more" href="./sites/quiz/index.html">View Project »</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer class="footer-basic">
-
-    <div class="social">
-      <a href="#"><i class="fas fa-hashtag"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fas fa-at"></i></a>
-      <a href="#"><i class="fas fa-mobile"></i></a>
-    </div>
-    <ul class="list-inline">
-      <li class="list-inline-item"><a href="index.html">Home</a></li>
-      <li class="list-inline-item"><a href="404.html">Blog</a></li>
-      <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-      <li class="list-inline-item"><a href="https://github.com/jaybitdesign">GitHub</a></li>
-      <li class="list-inline-item"><a href="assets/resume.pdf">Resume</a></li>
-    </ul>
-    <p class="mt-4 copyright">Copyright <strong>James Buchanan</strong> © 2019</p>
-
-  </footer>
-
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/script.min.js"></script>
-  <script src="assets/js/fittext.min.js"></script>
-  <script async src="assets/js/typer.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="assets/js/script.min.js"></script>
 </body>
 
 </html>
