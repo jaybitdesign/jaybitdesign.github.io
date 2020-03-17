@@ -30,62 +30,105 @@
 
   gtag('config', 'UA-136969731-2');
 </script>
+<script>
+
+// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+
+//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+//** Call: uniquevar.playclip() to play sound
+
+var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+}
+
+function createsoundbite(sound){
+	var html5audio=document.createElement('audio')
+	if (html5audio.canPlayType){ //check support for HTML5 audio
+		for (var i=0; i<arguments.length; i++){
+			var sourceel=document.createElement('source')
+			sourceel.setAttribute('src', arguments[i])
+			if (arguments[i].match(/\.(\w+)$/i))
+				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+			html5audio.appendChild(sourceel)
+		}
+		html5audio.load()
+		html5audio.playclip=function(){
+			html5audio.pause()
+			html5audio.currentTime=0
+			html5audio.play()
+		}
+		return html5audio
+	}
+	else{
+		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+	}
+}
+
+//Initialize two sound clips with 1 fallback file each:
+
+var click=createsoundbite("click.ogg", "click.mp3")
+
+</script>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-white shadow-sm portfolio-navbar gradient">
-        <div class="container"><a class="navbar-brand logo pt-2" id="brand-large" href="index.html" style="font-family: Allura, cursive;font-weight: normal;font-size: 30px;">James Buchanan</a><a class="navbar-brand logo pt-2" id="brand-small" href="#" style="font-family: Allura, cursive;font-weight: normal;font-size: 30px;">J . B .</a>
+    <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #121212;">
+        <div class="container"><a class="navbar-brand logo pt-2" id="brand-large" href="index.html" style="font-family: Allura, cursive;font-weight: normal;font-size: 30px;">James Buchanan</a><a class="navbar-brand logo pt-2" id="brand-small" href="index.html" style="font-family: Allura, cursive;font-weight: normal;font-size: 30px;">J . B .</a>
             <button
                 data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse text-uppercase" id="navbarNav" style="letter-spacing: 1px;font-family: Lato, sans-serif;font-size: 14px;">
                     <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html#welcome">Welcome</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html#skills">Skills</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html#portfolio">Portfolio</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="resume.pdf"><strong>Résumé</strong></a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link transition" href="index.html#welcome">Welcome</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link transition" href="index.html#skills">Skills</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link transition" href="index.html#portfolio">Portfolio</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link transition" href="resume.pdf"><strong>Résumé</strong></a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link transition" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
         </div>
     </nav>
     <main>
-        <section class="text-left shadow-sm portfolio-block block-intro mb-3" id="jumbotron" style="background-repeat: no-repeat;background-size: cover;background-image: url(&quot;assets/img/background.jpg&quot;);">
+        <section class="text-left bg-dark shadow portfolio-block block-intro mb-3" id="jumbotron">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 text-center" id="portrait">
-                        <div class="cosha"><img class="rounded img-fluid shadow mb-0" src="assets/img/portfolio.jpg" style="max-height: 400px;"></div>
+                        <div><img class="rounded img-fluid shadow mb-0" src="assets/img/portfolio.jpg" style="max-height: 330px;"></div>
                     </div>
                     <div class="col-lg-8 d-flex align-items-center">
                         <div id="about-me" class="about-me">
-                            <h1 class="mb-4" style="font-size: 2.1rem;">My name is <span style="font-weight: bold;font-style: normal;font-family: Allura, cursive;font-size: 2.7rem;">James Buchanan</span></h1>
-                            <hr>
-                            <p class="mb-2">I'm a web developer and user experience designer driven by a passion for creating <strong>effective</strong>, <strong>fast</strong>, and <strong>easy to use</strong> websites.<br></p><a class="btn btn-link mt-2 mr-4 px-1" role="button"
-                                style="border-radius: 7px !important;font-size: 16px;" href="mailto:jaybitdesign@gmail.com">jaybitdesign@gmail.com</a><a class="btn btn-primary shadow-sm mr-3 mt-2" role="button" style="border-radius: 7px !important;" href="contact.html">Contact me today!</a></div>
+                            <h1 class="text-light mb-2" style="font-size: 2.1rem;">My name is <span style="font-weight: normal;font-style: normal;font-family: Allura, cursive;font-size: 2.7rem;">James Buchanan</span></h1>
+                            <p class="text-light mb-3">I'm a web developer and user experience designer driven by a passion for creating <strong><em>effective</em></strong>, <strong><em>fast</em></strong>, and <strong><em>easy to use</em></strong> websites.<br></p><a class="btn btn-link text-light mt-2 mr-4 px-1"
+                                role="button" style="border-radius: 7px !important;font-size: 16px;" href="mailto:jaybitdesign@gmail.com">jaybitdesign@gmail.com</a><a class="btn btn-primary shadow-sm mr-3 mt-2" role="button" style="border-radius: 7px !important;"
+                                href="contact.html">Contact me today!</a></div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="skills" class="portfolio-block skills" style="border-bottom: none !important;">
-            <div class="container">
+        <section id="skills" class="portfolio-block skills py-5" style="border-bottom: none !important;">
+            <div class="container pb-5">
                 <div class="heading mb-4">
                     <h2 class="pt-4" style="font-size: 2.3rem;">Skills</h2>
-                    <p>Here are some of the fields that I specialize in. If you have any questions for me, please&nbsp;<a class="text-primary" href="mailto:jaybitdesign@gmail.com">send an email</a>.<br></p>
+                    <p style="font-size: 18px;">Here are some of the fields that I specialize in. If you have any questions, please&nbsp;<a class="text-primary" href="mailto:jaybitdesign@gmail.com">email me</a>.<br></p>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="card special-skill-item border-0 pt-3 pb-2" style="background-color: transparent;">
                             <div class="card-header bg-transparent border-0"><i class="fas fa-code fa-6x scale-on-hover transition" style="box-shadow: none !important;color: rgb(14,160,255);"></i></div>
-                            <div class="card-body">
+                            <div class="card-body pt-2">
                                 <h3 class="card-title" style="font-size: 1.5rem;">Web Development</h3>
                                 <div class="d-flex justify-content-center">
-                                    <p style="max-width: 420px;">Have an idea that you want built? As a full stack developer, I'm here to help create it.</p>
+                                    <p style="max-width: 420px;">Have an idea that you need built? As a full stack developer, I'm here to help create it.</p>
                                 </div><a class="btn btn-primary shadow-sm" role="button" style="letter-spacing: 2px;border-radius: 7px !important;font-size: 16px;font-weight: bold;width: 90%;max-width: 240px;" href="contact.html">Create</a></div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="card special-skill-item border-0 pt-3 pb-2" style="background-color: transparent;">
                             <div class="card-header bg-transparent border-0"><i class="far fa-laugh fa-6x scale-on-hover transition" style="box-shadow: none !important;color: rgb(14,160,255);"></i></div>
-                            <div class="card-body">
+                            <div class="card-body pt-2">
                                 <h3 class="card-title" style="font-size: 1.5rem;">Interface Design</h3>
                                 <div class="d-flex justify-content-center">
                                     <p style="max-width: 420px;">I design websites to remove stress &nbsp;for the end user, increasing conversion rates.</p>
@@ -95,28 +138,29 @@
                     <div class="col-lg-4">
                         <div class="card special-skill-item border-0 pt-3 pb-2" style="background-color: transparent;">
                             <div class="card-header bg-transparent border-0"><i class="fas fa-crosshairs fa-6x scale-on-hover transition" style="box-shadow: none !important;color: rgb(14,160,255);"></i></div>
-                            <div class="card-body">
-                                <h3 class="card-title" style="font-size: 1.5rem;">Google Ads &amp; SEO&nbsp;</h3>
+                            <div class="card-body pt-2">
+                                <h3 class="card-title" style="font-size: 1.5rem;">Digital Marketing</h3>
                                 <div class="d-flex justify-content-center">
-                                    <p style="max-width: 420px;">I am certified in Google Ads &amp; Analytics to help generate and analyze new traffic.</p>
+                                    <p style="max-width: 420px;">I am certified by Google to help generate new traffic and maximize website visibility.</p>
                                 </div><a class="btn btn-primary shadow-sm" role="button" style="letter-spacing: 2px;border-radius: 7px !important;font-size: 16px;font-weight: bold;width: 90%;max-width: 240px;" href="contact.html">Market</a></div>
                         </div>
                     </div>
                 </div>
-                <p class="text-center text-secondary mb-0" style="font-size: 1.8rem;font-style: italic;font-weight: bold;">...and&nbsp;<a href="resume.pdf">much more!</a><br></p>
+                <p class="text-center text-secondary" style="font-size: 1.8rem;font-style: italic;font-weight: bold;">...and&nbsp;<a href="resume.pdf">much more!</a><br></p>
             </div>
         </section>
-        <section class="shadow-sm portfolio-block website py-5 gradient mb-3" id="solutions" style="background-size: cover;background-repeat: no-repeat;">
+        <section class="bg-dark shadow portfolio-block website py-0" id="solutions">
             <div class="container">
-                <div class="row d-flex justify-content-center align-items-center py-4">
-                    <div class="col-md-12 col-lg-4 d-flex justify-content-center">
-                        <div class="bg-white border rounded border-white shadow-sm p-4 py-5" data-aos="flip-down" data-aos-once="true" id="solution"><img class="img-fluid" src="assets/img/solution.gif"></div>
-                    </div>
-                    <div class="col text-left text my-4 px-5" data-aos="flip-right" data-aos-once="true">
-                        <p class="text-white" style="font-size: 2.0rem;font-weight: bold;">Let's build a solution.</p>
-                        <hr style="color: white;">
-                        <p class="text-white mb-3" style="/*max-width: 600px;*/font-size: 1.2rem;">If you have a project that you want to get started, or think i may be a good candidate for your current job posting, here's my email:<br></p><a class="btn btn-light text-primary shadow-sm mr-3 mt-2" role="button" style="border-radius: 7px !important;"
-                            href="mailto:jaybitdesign@gmail.com">jaybitdesign@gmail.com</a><a class="btn btn-link text-white px-1 mt-2" role="button" style="border-radius: 7px !important;font-size: 16px;" href="mailto:jaybitdesign@gmail.com">Contact me today!</a>
+                <div class="row d-flex align-items-center justify-content-lg-center py-5">
+                    <div class="col-lg-3" id="solution"><img class="img-fluid" src="assets/img/jaybit512.png"></div>
+                    <div class="col-lg-8 text-left text my-4 px-5" data-aos="flip-right" data-aos-once="true">
+                        <p class="text-light mb-2" style="font-size: 2.0rem;font-weight: bold;">Let's build a solution.</p>
+                        <div class="justify-content-center">
+                            <div style="max-width: 620px;">
+                                <p class="text-white mb-3" style="font-size: 1.2rem;">If you have a project that you want to get started, or think I might be a good candidate for your current job posting,&nbsp;&nbsp;<a class="text-primary" href="mailto:jaybitdesign@gmail.com">email me</a>.</p>
+                            </div>
+                        </div><a class="btn btn-link text-white mt-2 mr-4 px-1" role="button" style="border-radius: 7px !important;font-size: 16px;" href="mailto:jaybitdesign@gmail.com">jaybitdesign@gmail.com</a><a class="btn btn-primary shadow-sm mr-3 mt-2"
+                            role="button" style="border-radius: 7px !important;" href="contact.html">Contact me today!</a>
                         <p></p>
                     </div>
                 </div>
@@ -126,12 +170,12 @@
             <div class="container">
                 <div class="heading mb-5">
                     <h2 class="pt-4" style="font-size: 2.3rem;">Portfolio</h2>
-                    <p>From here you can browse some of my past work. You can also visit my&nbsp;<a class="text-primary" href="http://github.com/jaybitdesign">github</a>, or view my&nbsp;<a class="text-primary" href="resume.pdf">résumé</a>.<br></p>
+                    <p style="font-size: 18px;">From here you can browse some of my past work. You can also visit my&nbsp;<a class="text-primary" href="http://github.com/jaybitdesign">github</a>, or view my&nbsp;<a class="text-primary" href="resume.pdf">résumé</a>.<br></p>
                 </div>
                 <div class="row d-flex justify-content-center">
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a class="mb-1" href="https://ignitemp.com/"><img class="card-img-top mb-2 scale-on-hover transition" src="assets/img/ignite1.PNG" alt="Card Image" style="box-shadow: none !important;"></a>
-                            <div class="card-body pt-0">
+                        <div class="card border-0 p-3 pt-4" style="background-color: transparent;"><a class="mb-1" href="https://ignitemp.com/"><img class="card-img-top mb-2 hover-opacity" src="assets/img/ignite1.PNG" alt="Card Image" style="box-shadow: none !important;border: none;"></a>
+                            <div class="card-body py-0">
                                 <h3 style="font-size: 1.4rem;">Ignite Marketing</h3>
                                 <p><a class="text-primary" href="https://ignitemp.com/">View&nbsp;<i class="fas fa-arrow-right" style="font-size: 12px;"></i></a></p>
                                 <div></div>
@@ -139,24 +183,24 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a class="mb-1" href="https://hillsvac.com/"><img class="card-img-top mb-2 scale-on-hover transition" src="assets/img/hills1.png" alt="Card Image" style="box-shadow: none !important;"></a>
-                            <div class="card-body pt-0">
+                        <div class="card border-0 p-3 pt-4" style="background-color: transparent;"><a class="mb-1" href="https://hillsvac.com/"><img class="card-img-top mb-2 hover-opacity" src="assets/img/hills1.png" alt="Card Image" style="box-shadow: none !important;border: none;"></a>
+                            <div class="card-body py-0">
                                 <h3 style="font-size: 1.4rem;">Hills Vac &amp; Steam</h3>
                                 <p><a class="text-primary" href="https://hillsvac.com/">View&nbsp;<i class="fas fa-arrow-right" style="font-size: 12px;"></i></a></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a class="mb-1" href="https://ccintl.ca/"><img class="card-img-top mb-2 scale-on-hover transition" src="assets/img/cci1.png" alt="Card Image" style="box-shadow: none !important;"></a>
-                            <div class="card-body pt-0">
+                        <div class="card border-0 p-3 pt-4" style="background-color: transparent;"><a class="mb-1" href="https://ccintl.ca/"><img class="card-img-top mb-2 hover-opacity" src="assets/img/cci1.png" alt="Card Image" style="box-shadow: none !important;border: none;"></a>
+                            <div class="card-body py-0">
                                 <h3 style="font-size: 1.4rem;">Custom Coatings Intl.</h3>
                                 <p><a class="text-primary" href="https://ccintl.ca/">View&nbsp;<i class="fas fa-arrow-right" style="font-size: 12px;"></i></a></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a class="mb-1" href="https://trappergord.com/"><img class="card-img-top mb-2 scale-on-hover transition" src="assets/img/trapper1.png" alt="Card Image" style="box-shadow: none !important;"></a>
-                            <div class="card-body px-0 pt-0">
+                        <div class="card border-0 p-3 pt-4" style="background-color: transparent;"><a class="mb-1" href="https://trappergord.com/"><img class="card-img-top mb-2 hover-opacity" src="assets/img/trapper1.png" alt="Card Image" style="box-shadow: none !important;border: none;"></a>
+                            <div class="card-body py-0">
                                 <h3 style="font-size: 1.4rem;">Trapper Gord</h3>
                                 <p><a class="text-primary" href="https://trappergord.com/">View&nbsp;<i class="fas fa-arrow-right" style="font-size: 12px;"></i></a></p>
                                 <div></div>
@@ -164,8 +208,8 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a class="mb-1" href="https://jaybitdesign.github.io/sites/agency/index.html"><img class="card-img-top mb-2 scale-on-hover transition" src="assets/img/jaybit1.PNG" alt="Card Image" style="box-shadow: none !important;"></a>
-                            <div class="card-body px-0 pt-0">
+                        <div class="card border-0 p-3 pt-4" style="background-color: transparent;"><a class="mb-1" href="https://jaybitdesign.github.io/sites/agency/index.html"><img class="card-img-top mb-2 hover-opacity" src="assets/img/jaybit1.PNG" alt="Card Image" style="box-shadow: none !important;border: none;"></a>
+                            <div class="card-body py-0">
                                 <h3 style="font-size: 1.3rem;">Old Jaybit</h3>
                                 <p><a class="text-primary" href="https://jaybitdesign.github.io/sites/agency/index.html">View&nbsp;<i class="fas fa-arrow-right" style="font-size: 12px;"></i></a></p>
                                 <div></div>
@@ -173,8 +217,8 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a class="mb-1" href="https://jaybitdesign.github.io/sites/starry-404/"><img class="card-img-top mb-2 scale-on-hover transition" src="assets/img/starry1.PNG" alt="Card Image" style="box-shadow: none !important;"></a>
-                            <div class="card-body px-0 pt-0">
+                        <div class="card border-0 p-3 pt-4" style="background-color: transparent;"><a class="mb-1" href="https://jaybitdesign.github.io/sites/starry-404/"><img class="card-img-top mb-2 hover-opacity" src="assets/img/starry1.PNG" alt="Card Image" style="box-shadow: none !important;border: none;"></a>
+                            <div class="card-body py-0">
                                 <h3 style="font-size: 1.4rem;">Starry 404</h3>
                                 <p><a class="text-primary" href="https://jaybitdesign.github.io/sites/starry-404/">View&nbsp;<i class="fas fa-arrow-right" style="font-size: 12px;"></i></a></p>
                                 <div></div>
@@ -185,7 +229,7 @@
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer></footer><button class="btn btn-warning btn-lg m-2 hover-opacity" id="lightswitch" type="button" onclick="toggleLightswitch();click.playclip();"><i class="fas fa-sun"></i></button>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/smart-forms.min.js"></script>
