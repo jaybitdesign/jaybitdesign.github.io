@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Metadata -->
+  <meta charset="utf-8">
+  <meta name="author" content="James Buchanan">
+  <meta name="description" content="A fake travel agency website.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Accelerate font loading -->
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Raleway" as="style">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <title>JayTravel</title>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="jmenu">
+    <label for="menu-btn" class="jm-menu-btn jm-icon-menu"></label>
+    <input type="checkbox" id="menu-btn" class="jm-menu-btn">
+    <ul class="jm-collapse">
+      <li><a class="nav-item" href="index.html">Home</a></li>
+      <li><a class="nav-item" href="register.html">Sign Up</a></li>
+      <li><a class="nav-item" href="packages.html">Packages</a></li>
+      <li><a class="nav-item" href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <div class="container">
+
+    <!-- Spacing -->
+    <br><br><br><br>
+
+    <!-- Title -->
+    <h1 class="title">JayTravel</h1>
+    <h3>The best way to explore</h3>
+
+    <!-- Horizontal Rule -->
+    <hr>
+
+    <!-- Package Locations -->
+    <div class="row">
+      <div class="four columns" style="text-align:center;">
+        <div onmouseover="fade(0,'mexico')" onmouseout="fade(1,'mexico')">
+          <img class="package-image u-max-full-width" src="img/mexico-alt.jpg" id="mexico">
+        </div>
+        <h4 class="package-title">Mexico</h4>
+        <a class="button button-primary" href="packages.html#mexico">
+          Learn More
+        </a>
+        <br><br>
+
+      </div>
+      <div class="four columns" style="text-align:center;">
+        <div onmouseover="fade(0,'barbados')" onmouseout="fade(1,'barbados')">
+          <img class="package-image u-max-full-width" src="img/barbados-alt.jpg" id="barbados">
+        </div>
+        <h4 class="package-title">Barbados</h4>
+        <a class="button button-primary" href="packages.html#barbados">
+          Learn More
+        </a>
+        <br><br>
+
+      </div>
+      <div class="four columns" style="text-align:center;">
+        <div onmouseover="fade(0,'miami')" onmouseout="fade(1,'miami')">
+          <img class="package-image u-max-full-width" src="img/miami-alt.jpg" id="miami">
+        </div>
+        <h4 class="package-title">Miami</h4>
+        <a class="button button-primary" href="packages.html#miami">
+          Learn More
+        </a>
+        <br><br>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="four columns" style="text-align:center;">
+        <div onmouseover="fade(0,'greece')" onmouseout="fade(1,'greece')">
+          <img class="package-image u-max-full-width" src="img/greece-alt.jpg" id="greece">
+        </div>
+        <h4 class="package-title">Greece</h4>
+        <a class="button button-primary" href="packages.html#greece">
+          Learn More
+        </a>
+        <br><br>
+
+      </div>
+      <div class="four columns" style="text-align:center;">
+        <div onmouseover="fade(0,'paris')" onmouseout="fade(1,'paris')">
+          <img class="package-image u-max-full-width" src="img/paris-alt.jpg" id="paris">
+        </div>
+        <h4 class="package-title">Paris</h4>
+        <a class="button button-primary" href="packages.html#paris">
+          Learn More
+        </a>
+        <br><br>
+
+      </div>
+      <div class="four columns" style="text-align:center;">
+        <div onmouseover="fade(0,'cuba')" onmouseout="fade(1,'cuba')">
+          <img class="package-image u-max-full-width" src="img/cuba-alt.jpg" id="cuba">
+        </div>
+        <h4 class="package-title">Cuba</h4>
+        <a class="button button-primary" href="packages.html#cuba">
+          Learn More
+        </a>
+        <br><br>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Spacing -->
+  <br><br>
+
+  <!-- Footer -->
+  <div class="footer" style="text-align:center;">
+    <h6 class="date" id="date"></h6>
+    <hr>
+    <h3>JayTravel 2019</h3>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="js/date.js"></script>
+  <script src="js/packages.js"></script>
+
+</body>
+
+</html>

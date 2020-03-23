@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Metadata -->
+  <meta charset="utf-8">
+  <meta name="author" content="James Buchanan">
+  <meta name="description" content="A fake travel agency website.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Accelerate font loading -->
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Raleway" as="style">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <title>JayTravel</title>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="jmenu">
+    <label for="menu-btn" class="jm-menu-btn jm-icon-menu"></label>
+    <input type="checkbox" id="menu-btn" class="jm-menu-btn">
+    <ul class="jm-collapse">
+      <li><a class="nav-item" href="index.html">Home</a></li>
+      <li><a class="nav-item" href="register.html">Sign Up</a></li>
+      <li><a class="nav-item" href="packages.html">Packages</a></li>
+      <li><a class="nav-item" href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Register -->
+  <div class="container">
+    <br><br>
+    <h1 class="title">Sign Up</h1>
+    <hr>
+    <!-- Submit this form to /bouncer.php -->
+    <form action="/bouncer.php">
+      <div class="row">
+        <div class="four columns">
+          <label for="email">Email:</label>
+          <input class="u-full-width" type="email" placeholder="name@website.com" id="email" required>
+        </div>
+        <div class="four columns">
+          <label for="postal">Password:</label>
+          <input class="u-full-width" type="password" placeholder="**********" id="password" required>
+        </div>
+        <div class="four columns">
+          <label for="phone">Phone #:</label>
+          <input class="u-full-width" type="tel" placeholder="1234567890" id="phone" required pattern="\d{3}\d{3}\d{4}">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="six columns">
+          <label for="address">Address:</label>
+          <input class="u-full-width" type="text" placeholder="123 windy street NW" id="address" required>
+        </div>
+        <div class="three columns">
+          <label for="postal">Postal Code:</label>
+          <input class="u-full-width" type="text" placeholder="A1B 2C3" id="postal" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]">
+        </div>
+        <div class="three columns">
+          <label for="city">City:</label>
+          <input class="u-full-width" type="text" placeholder="Toronto" id="city" required>
+        </div>
+      </div>
+      <br>
+      <label for="message">Message (optional):</label>
+      <textarea class="u-full-width" placeholder="Hi JayTravel..." id="message" style="resize: vertical;"></textarea>
+      <br><br>
+      <label>
+        <input type="checkbox" required>
+        <span class="label-body">I agree to the terms & conditions</span>
+      </label>
+      <br>
+      <input style="width:180px" class="button-primary" type="submit" value="Sign Up">
+    </form>
+  </div>
+
+  <!-- Spacing -->
+  <br><br>
+
+  <!-- Footer -->
+  <div class="footer" style="text-align:center;">
+    <h6 class="date" id="date"></h6>
+    <hr>
+    <h3>JayTravel 2019</h3>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="js/date.js"></script>
+
+</body>
+
+</html>

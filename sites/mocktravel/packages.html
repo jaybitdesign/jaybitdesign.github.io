@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Metadata -->
+  <meta charset="utf-8">
+  <meta name="author" content="James Buchanan">
+  <meta name="description" content="A fake travel agency website.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Accelerate font loading -->
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Raleway" as="style">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/packages.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <title>JayTravel</title>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="jmenu">
+    <label for="menu-btn" class="jm-menu-btn jm-icon-menu"></label>
+    <input type="checkbox" id="menu-btn" class="jm-menu-btn">
+    <ul class="jm-collapse">
+      <li><a class="nav-item" href="index.html">Home</a></li>
+      <li><a class="nav-item" href="register.html">Sign Up</a></li>
+      <li><a class="nav-item" href="packages.html">Packages</a></li>
+      <li><a class="nav-item" href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Spacing -->
+  <br><br>
+
+  <!-- Spacing -->
+  <br><br>
+
+  <!-- Packages -->
+  <div class="container">
+
+    <!-- Title -->
+    <h1 class="title">Our Packages</h1>
+
+    <!-- Horizontal Rule -->
+    <hr>
+
+    <!-- Package Locations -->
+    <div class="row" style="text-align:center;">
+      <div class="six columns">
+        <div onmouseover="fade(0,'mexico')" onmouseout="fade(1,'mexico')">
+          <img class="package-image u-max-full-width" src="img/mexico-alt.jpg" id="mexico">
+        </div>
+        <br>
+        <h3 class="package-title">Mexico</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a class="button" href="contact.html">Purchase</a><br><br><br>
+
+      </div>
+      <div class="six columns">
+        <div onmouseover="fade(0,'barbados')" onmouseout="fade(1,'barbados')">
+          <img class="package-image u-max-full-width" src="img/barbados-alt.jpg" id="barbados">
+        </div>
+        <br>
+        <h3 class="package-title">Barbados</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a class="button" href="contact.html">Purchase</a><br><br><br>
+      </div>
+    </div>
+    <div class="row" style="text-align:center;">
+      <div class="six columns">
+        <div onmouseover="fade(0,'miami')" onmouseout="fade(1,'miami')">
+          <img class="package-image u-max-full-width" src="img/miami-alt.jpg" id="miami">
+        </div>
+        <br>
+        <h3 class="package-title">Miami</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a class="button" href="contact.html">Purchase</a><br><br><br>
+
+      </div>
+      <div class="six columns">
+        <div onmouseover="fade(0,'greece')" onmouseout="fade(1,'greece')">
+          <img class="package-image u-max-full-width" src="img/greece-alt.jpg" id="greece">
+        </div>
+        <br>
+        <h3 class="package-title">Greece</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a class="button" href="contact.html">Purchase</a><br><br><br>
+      </div>
+    </div>
+    <div class="row" style="text-align:center;">
+      <div class="six columns">
+        <div onmouseover="fade(0,'paris')" onmouseout="fade(1,'paris')">
+          <img class="package-image u-max-full-width" src="img/paris-alt.jpg" id="paris">
+        </div>
+        <br>
+        <h3 class="package-title">Paris</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a class="button" href="contact.html">Purchase</a><br><br><br>
+      </div>
+      <div class="six columns">
+        <div onmouseover="fade(0,'cuba')" onmouseout="fade(1,'cuba')">
+          <img class="package-image u-max-full-width" src="img/cuba-alt.jpg" id="cuba">
+        </div>
+        <br>
+        <h3 class="package-title">Cuba</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a class="button" href="contact.html">Purchase</a><br><br><br>
+      </div>
+    </div>
+  </div>
+
+  <!-- Spacing -->
+  <br><br>
+
+  <!-- Footer -->
+  <div class="footer" style="text-align:center;">
+    <h6 class="date" id="date"></h6>
+    <hr>
+    <h3>JayTravel 2019</h3>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="js/animate.js"></script>
+  <script src="js/packages.js"></script>
+  <script src="js/date.js"></script>
+
+</body>
+
+</html>
