@@ -34,7 +34,7 @@
 </head>
 
 <body class="dark-mode"><script>document.body.className += ' fade-out';</script>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark" id="top" style="background-color: #6091ef;">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark" id="top">
         <div class="container"><a class="navbar-brand logo pt-2" id="brand-large" href="index.html" style="font-family: Allura, cursive;font-weight: normal;font-size: 30px;">James Buchanan</a><a class="navbar-brand logo pt-2" id="brand-small" href="index.html" style="font-family: Allura, cursive;font-weight: normal;font-size: 30px;">J . B .</a>
             <button
                 data-toggle="collapse" class="navbar-toggler border rounded border-dark" data-target="#navbarNav"><i class="fas fa-fingerprint py-2"></i></button>
@@ -73,16 +73,13 @@
         </div>
         </div>
     </main>
-    <div id="lightswitch" style="border: none;">
-        <div><a class="btn btn-dark btn-sm border rounded-0 border-dark shadow-sm d-block" role="button" style="font-size: 16px;padding-top: 6px;width: 100%;" href="mailto:jaybitdesign@gmail.com"><span><i class="fab fa-github-alt"></i></span></a><a class="btn btn-info btn-sm border rounded-0 border-info shadow-sm d-block"
-                role="button" style="font-size: 16px;padding-top: 6px;width: 100%;" href="mailto:jaybitdesign@gmail.com"><span><i class="far fa-envelope"></i></span></a><button class="btn btn-warning btn-sm text-center border rounded-0 border-warning shadow-sm d-block"
-                type="button" onclick="toggleLightswitch();" style="font-size: 16px;padding-top: 6px;width: 100%;"><span id="indicator" style="opacity: 0.80;"><i class="fas fa-sun"></i></span></button></div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/smart-forms.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
-    <script src="assets/js/script.min.js"></script>
+    <div id="lightswitch" class="pb-5" style="border: none;"><button class="btn btn-warning btn-sm text-center d-block left-border pr-2" type="button" onclick="toggleLightswitch();" style="font-size: 16px;padding-top: 6px;width: 100%;" data-toggle="tooltip" title="Toggle dark &amp; light mode"><span id="indicator" style="opacity: 0.80;"><i class="fas fa-moon"></i></span></button></div>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/smart-forms.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+        <script src="assets/js/script.min.js"></script>
 </body>
 
 </html>
