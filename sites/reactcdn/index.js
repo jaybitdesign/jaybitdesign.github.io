@@ -28,7 +28,7 @@ const Features = ({ title }) => {
     const Feature = ({ primary, secondary }) => {
         return (
             <div className="col-md-4 text-center">
-                <h1 className="display-6">{primary}</h1><hr />
+                <h4 className="display-6">{primary}</h4><hr />
                 <p className="fw-lighter">{secondary}</p>
             </div>
         )
@@ -45,6 +45,62 @@ const Features = ({ title }) => {
     )
 }
 
+const List = () => {
+    const ListButton = ({ id }) => {
+        return (
+            <button onClick={() => showArticle(id)} className="list-group-item list-group-item-action link-primary"><span>Article Number {id}</span></button>
+        )
+    }
+    return (
+        <div className="container pb-5">
+            <div className="row">
+                <div id="list" className="col-md-4 py-2">
+                    <div className="list-group">
+                        <ListButton id={0} />
+                        <ListButton id={1} />
+                        <ListButton id={2} />
+                    </div>
+                </div>
+                <div className="col-md-8 py-2" id="current">
+                    <Article id={0} />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+
+
+const Article = ({ id }) => {
+    let content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris odio ante, imperdiet eu metus sit amet, ullamcorper porttitor tortor. Integer dapibus quis quam ut viverra. Phasellus eleifend ut tellus ut rutrum. In eleifend lacus ac ligula rhoncus rutrum. Vestibulum et venenatis ex. Sed pretium mi at molestie ullamcorper. Vestibulum blandit metus vitae dolor rhoncus volutpat.";
+    switch (id) {
+        case (0):
+            content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris odio ante, imperdiet eu metus sit amet, ullamcorper porttitor tortor. Integer dapibus quis quam ut viverra. Phasellus eleifend ut tellus ut rutrum. In eleifend lacus ac ligula rhoncus rutrum. Vestibulum et venenatis ex. Sed pretium mi at molestie ullamcorper. Vestibulum blandit metus vitae dolor rhoncus volutpat."
+            break;
+        case (1):
+            content = "Ut enim urna, hendrerit sed neque sit amet, tincidunt finibus erat. Integer iaculis nibh sit amet rutrum scelerisque. Proin ac lectus semper, pharetra quam a, venenatis sapien. Duis dignissim est a odio vestibulum hendrerit. Morbi non interdum leo. Integer vulputate felis quis tortor viverra suscipit. Morbi a sapien faucibus, suscipit nulla ac, dapibus diam. Phasellus vel lorem diam. Nam sodales nec erat in luctus. Cras luctus felis est, ut sagittis tortor rutrum non. Duis vitae ante a mauris tempus mollis. Nulla eu enim nunc."
+            break;
+        case (2):
+            content = "Curabitur ultrices, felis id mattis vulputate, justo leo condimentum nunc, a maximus nunc nulla in justo. Sed vehicula vulputate purus, sit amet rutrum mi ullamcorper id. Fusce mattis sem ante, dapibus gravida mi finibus quis. Nam viverra nisi odio. In a fermentum leo. Etiam vestibulum felis eget aliquam vestibulum. Nulla a mattis ipsum. Sed ullamcorper feugiat elit, sed molestie quam. Nulla finibus velit at libero placerat, in ultricies turpis commodo. Suspendisse interdum metus sit amet erat rutrum, quis aliquet lorem congue."
+            break;
+    }
+    return (
+        <div className="card">
+            <div className="card-header">
+                <h4 className="fs-4 fw-normal mb-0">Article Number {id}</h4>
+            </div>
+            <div className="card-body">
+                <p className="card-text">{content}</p>
+            </div>
+        </div>
+    )
+}
+
+function showArticle(id) {
+    ReactDOM.render(<Article id={id} />, document.getElementById("current"))
+}
+
 ReactDOM.render(<Navbar brand="React CDN" />, document.getElementById("navbar"))
 ReactDOM.render(<Jumbotron h1="React w/ CDN" h2="Plus Babel!" />, document.getElementById("jumbotron"))
 ReactDOM.render(<Features title="How does it work?" />, document.getElementById("features"))
+ReactDOM.render(<List />, document.getElementById("articles"))
