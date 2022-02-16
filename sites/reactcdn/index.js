@@ -1,6 +1,6 @@
 const Navbar = ({ brand }) => {
     return (
-        <nav className="navbar navbar-light navbar-expand-sm bg-white">
+        <nav className="mb-5 navbar navbar-light navbar-expand-sm bg-white">
             <div className="container-fluid"><a className="navbar-brand" href="#">{brand}</a><button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span className="visually-hidden">Toggle navigation</span><span className="navbar-toggler-icon"></span></button>
                 <div id="navcol-1" className="collapse navbar-collapse">
                     <ul className="navbar-nav">
@@ -16,7 +16,7 @@ const Navbar = ({ brand }) => {
 const Jumbotron = ({ h1, h2 }) => {
     return (
         <div className="d-flex justify-content-center align-items-center py-5">
-            <div className="container">
+            <div className="container py-5">
                 <h1 className="display-1 fw-bold text-center">{h1}</h1>
                 <h2 className="display-6 text-center">{h2}</h2>
             </div>
@@ -59,6 +59,8 @@ const List = () => {
                         <ListButton id={0} />
                         <ListButton id={1} />
                         <ListButton id={2} />
+                        <ListButton id={3} />
+                        <ListButton id={4} />
                     </div>
                 </div>
                 <div className="col-md-8 py-2" id="current">
@@ -82,6 +84,12 @@ const Article = ({ id }) => {
             break;
         case (2):
             content = "Curabitur ultrices, felis id mattis vulputate, justo leo condimentum nunc, a maximus nunc nulla in justo. Sed vehicula vulputate purus, sit amet rutrum mi ullamcorper id. Fusce mattis sem ante, dapibus gravida mi finibus quis. Nam viverra nisi odio. In a fermentum leo. Etiam vestibulum felis eget aliquam vestibulum. Nulla a mattis ipsum. Sed ullamcorper feugiat elit, sed molestie quam. Nulla finibus velit at libero placerat, in ultricies turpis commodo. Suspendisse interdum metus sit amet erat rutrum, quis aliquet lorem congue."
+            break;
+        case (3):
+            content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et blandit nisi. Aenean dapibus, nisi id venenatis ultrices, libero augue ullamcorper leo, et fermentum nunc eros at dui. Nulla ullamcorper, nulla eu bibendum gravida, lectus metus ultrices mi, sed maximus magna diam at lacus. Sed non massa faucibus, malesuada nunc eu, fringilla purus. Sed sagittis ante ac augue tempor, nec interdum nisl dignissim. Vivamus vulputate, ex eu semper vehicula, augue ipsum dignissim lorem, vel maximus justo massa ac justo. Morbi eu tortor at orci interdum semper. Integer et suscipit ligula. Sed vel lacinia risus. Sed justo urna, fringilla in est sed, bibendum facilisis nunc."
+            break;
+        case (4):
+            content = "Nullam eu magna tincidunt, viverra ligula at, tempus arcu. Pellentesque dapibus pretium ligula, gravida eleifend ex. Praesent pellentesque mattis eros vel sodales. Vestibulum ornare urna sem. Ut convallis dapibus tortor, vel iaculis purus imperdiet sed. Etiam tincidunt venenatis nunc vel auctor. Fusce suscipit vulputate est. Integer id facilisis dui, nec tempor lorem. Nam ut metus sollicitudin, ultricies purus vel, vulputate erat. Nunc porta orci sit amet libero mollis, non varius mi fringilla. In hac habitasse platea dictumst. Aenean eget turpis mattis, egestas massa ut, consectetur libero. Donec aliquam purus in urna laoreet, sit amet suscipit mauris mattis."
             break;
     }
     return (
