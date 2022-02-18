@@ -1,6 +1,6 @@
 const Navbar = ({ brand }) => {
     return (
-        <nav className="mb-5 navbar navbar-light navbar-expand-sm bg-white">
+        <nav className="navbar navbar-light navbar-expand-sm bg-white">
             <div className="container-fluid"><a className="navbar-brand" href="#">{brand}</a><button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span className="visually-hidden">Toggle navigation</span><span className="navbar-toggler-icon"></span></button>
                 <div id="navcol-1" className="collapse navbar-collapse">
                     <ul className="navbar-nav">
@@ -15,31 +15,35 @@ const Navbar = ({ brand }) => {
 
 const Jumbotron = ({ h1, h2 }) => {
     return (
-        <div className="d-flex justify-content-center align-items-center py-5">
-            <div className="container py-5">
+        <div className="bg-light d-flex justify-content-center align-items-center py-5 mb-4">
+            <div className="container text-center py-5">
                 <h1 className="display-1 fw-bold text-center">{h1}</h1>
-                <h2 className="display-6 text-center">{h2}</h2>
+                <h2 className="display-6 text-center mb-4">{h2}</h2>
+                <a className="btn btn-primary" role="button" href="#features">How does it work?</a>
+                <a className="btn btn-link" role="button" href="https://reactjs.org/docs/add-react-to-a-website.html">React Docs</a>
             </div>
         </div>
     )
 }
 
 const Features = ({ title }) => {
-    const Feature = ({ primary, secondary }) => {
+    const Feature = ({ primary, secondary, src }) => {
         return (
-            <div className="col-md-4 text-center">
-                <h4 className="display-6">{primary}</h4><hr />
-                <p className="fw-lighter">{secondary}</p>
+            <div className="col-md-4 col-lg-3 text-center mb-4">
+                <img className="img-fluid" src={src} alt={primary} />
+                <h4 className="fw-bold display-6">{primary}</h4>
+                <p className="fw-lighter mb-1">{secondary}</p>
+                <a href="https://reactjs.org/docs/add-react-to-a-website.html">Learn more...</a>
             </div>
         )
     }
     return (
-        <div className="container py-5">
+        <div className="container py-5 mb-5">
             <h3 className="display-4 text-center mb-5">{title}</h3>
-            <div className="row">
-                <Feature primary="Babel + JSX" secondary="The client receives uncompiled JSX and links to React and the Babel compiler." />
-                <Feature primary="JavaScript" secondary="JSX is transformed into regular JavaScript in the browser at runtime." />
-                <Feature primary="Execution" secondary="JavaScript is executed by the clients browser with a noticeable hit to speed." />
+            <div className="row d-flex justify-content-center">
+                <Feature primary="Babel+JSX" secondary="The client receives uncompiled JSX and links to React and the Babel compiler." src="img/download.png" />
+                <Feature primary="Compilation" secondary="JSX is transformed into regular JavaScript in the browser at runtime." src="img/compilation.png" />
+                <Feature primary="Excecution" secondary="JavaScript is executed by the clients browser after the code transformation." src="img/execution.png" />
             </div>
         </div>
     )
@@ -53,18 +57,24 @@ const List = () => {
     }
     return (
         <div className="container pb-5">
-            <div className="row">
-                <div id="list" className="col-md-4 py-2">
-                    <div className="list-group">
-                        <ListButton id={0} />
-                        <ListButton id={1} />
-                        <ListButton id={2} />
-                        <ListButton id={3} />
-                        <ListButton id={4} />
-                    </div>
-                </div>
-                <div className="col-md-8 py-2" id="current">
+            <h3 className="display-4 text-center mb-5">Change data without refresh!</h3>
+            <div className="row d-flex justify-content-center">
+                <div className="col-lg-6 py-2" id="current">
                     <Article id={0} />
+                </div>
+                <div id="list" className="col-lg-3 py-2">
+                    <div className="card">
+                        <div className="card-body bg-light">
+                            <h4 className="mb-3">Article List</h4>
+                            <div className="list-group">
+                                <ListButton id={0} />
+                                <ListButton id={1} />
+                                <ListButton id={2} />
+                                <ListButton id={3} />
+                                <ListButton id={4} />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,10 +84,10 @@ const List = () => {
 
 
 const Article = ({ id }) => {
-    let content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris odio ante, imperdiet eu metus sit amet, ullamcorper porttitor tortor. Integer dapibus quis quam ut viverra. Phasellus eleifend ut tellus ut rutrum. In eleifend lacus ac ligula rhoncus rutrum. Vestibulum et venenatis ex. Sed pretium mi at molestie ullamcorper. Vestibulum blandit metus vitae dolor rhoncus volutpat.";
+    let content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris odio ante, imperdiet eu metus sit amet, ullamcorper porttitor tortor. Integer dapibus quis quam ut viverra. Phasellus eleifend ut tellus ut rutrum. In eleifend lacus ac ligula rhoncus rutrum. Vestibulum et venenatis ex. Sed pretium mi at molestie ullamcorper. Vestibulum blandit metus vitae dolor rhoncus volutpat.Mauris odio ante, imperdiet eu metus sit amet, ullamcorper porttitor tortor. Integer dapibus quis quam ut viverra. Phasellus eleifend ut tellus ut rutrum.";
     switch (id) {
         case (0):
-            content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris odio ante, imperdiet eu metus sit amet, ullamcorper porttitor tortor. Integer dapibus quis quam ut viverra. Phasellus eleifend ut tellus ut rutrum. In eleifend lacus ac ligula rhoncus rutrum. Vestibulum et venenatis ex. Sed pretium mi at molestie ullamcorper. Vestibulum blandit metus vitae dolor rhoncus volutpat."
+            content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris odio ante, imperdiet eu metus sit amet, ullamcorper porttitor tortor. Integer dapibus quis quam ut viverra. Phasellus eleifend ut tellus ut rutrum. In eleifend lacus ac ligula rhoncus rutrum. Vestibulum et venenatis ex. Sed pretium mi at molestie ullamcorper. Vestibulum blandit metus vitae dolor rhoncus volutpat.Mauris odio ante, imperdiet eu metus sit amet, ullamcorper porttitor tortor. Integer dapibus quis quam ut viverra. Phasellus eleifend ut tellus ut rutrum."
             break;
         case (1):
             content = "Ut enim urna, hendrerit sed neque sit amet, tincidunt finibus erat. Integer iaculis nibh sit amet rutrum scelerisque. Proin ac lectus semper, pharetra quam a, venenatis sapien. Duis dignissim est a odio vestibulum hendrerit. Morbi non interdum leo. Integer vulputate felis quis tortor viverra suscipit. Morbi a sapien faucibus, suscipit nulla ac, dapibus diam. Phasellus vel lorem diam. Nam sodales nec erat in luctus. Cras luctus felis est, ut sagittis tortor rutrum non. Duis vitae ante a mauris tempus mollis. Nulla eu enim nunc."
@@ -94,8 +104,8 @@ const Article = ({ id }) => {
     }
     return (
         <div className="card">
-            <div className="card-header">
-                <h4 className="fs-4 fw-normal mb-0">Article Number {id}</h4>
+            <div className="card-header bg-light">
+                <h4 className="display-6 mb-0">Article Number {id}</h4>
             </div>
             <div className="card-body">
                 <p className="card-text">{content}</p>
