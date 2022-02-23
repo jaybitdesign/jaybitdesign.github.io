@@ -6,6 +6,7 @@ const Navbar = ({ brand }) => {
                     <ul className="navbar-nav">
                         <li className="nav-item"><a className="nav-link" href="https://jaybitdesign.github.io/">My Portfolio</a></li>
                         <li className="nav-item"><a className="nav-link" href="https://github.com/jaybitdesign">Github</a></li>
+                        <li className="nav-item"><a className="nav-link" href="https://github.com/jaybitdesign/react-from-cdn">Source</a></li>
                     </ul>
                 </div>
             </div>

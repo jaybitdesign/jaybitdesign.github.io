@@ -13,9 +13,9 @@ const Features = ({ title }) => {
         <div className="container py-5 mb-5">
             <h3 className="display-4 text-center mb-5">{title}</h3>
             <div className="row d-flex justify-content-center">
-                <Feature primary="JSX+Babel" secondary="The client receives uncompiled JSX and links to React and the Babel compiler." src="../img/download.png" />
-                <Feature primary="Compilation" secondary="JSX is transformed into regular JavaScript in the browser at runtime." src="../img/compilation.png" />
-                <Feature primary="Excecution" secondary="JavaScript is executed by the clients browser after the code transformation." src="../img/execution.png" />
+                <Feature primary="JSX+Babel" secondary="The client receives uncompiled JSX and links to React and the Babel compiler." src="./download.png" />
+                <Feature primary="Compilation" secondary="JSX is transformed into regular JavaScript in the browser at runtime." src="./compilation.png" />
+                <Feature primary="Excecution" secondary="JavaScript is executed by the clients browser after the code transformation." src="./execution.png" />
             </div>
         </div>
     )

@@ -7,4 +7,5 @@ const render = () => {
 
     ReactDOM.render(<List />, document.getElementById("articles"))
 }
+
 render()
